@@ -184,3 +184,45 @@ footer nav ul li a:hover {
     padding: var(--spacing-12) var(--spacing-68);
     border-radius: 50px;
 }
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding-top: 50px;
+    background-color: #30343F;
+}
+
+.form-container .input-label {
+    display: block;
+    margin-top: 10px;
+}
+
+.form-container .input-text {
+    width: 400px;
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+.form-container .input-area {
+    width: 400px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+}
+
+.form-container .input-button {
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
