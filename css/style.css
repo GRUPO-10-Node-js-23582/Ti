@@ -282,6 +282,7 @@ footer nav ul li a:hover {
 .slider__items {
     display: flex;
     gap: var(--spacing-24);
+    
 
 }
 
