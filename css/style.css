@@ -99,6 +99,10 @@ img{
     position: relative;
 }
 
+.nav-link {
+    transition: background .3s ease-in-out;
+}
+
 .nav-item a:hover {
     color: white;
     text-decoration: underline;
@@ -356,6 +360,34 @@ footer nav ul li a:hover {
 }
 .card-item__cover:hover .card-item__img--front{
     display: none;    
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-68);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__link{
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .3s ease-in-out;
+}
+
+.navbar__link:hover{
+    background-color: var(--primary-900);
+}
+
+.footer__copy {
+    margin-top: var(--spacing-36);
+    text-align: center;
 }
 
 .form-container {
