@@ -65,6 +65,7 @@ a{
     color: inherit;
 }
 
+
 header {
     background-color: #30343F;
 }
@@ -80,6 +81,10 @@ ul,ol{
 
 p {
     font-size: 1.8em;
+}
+
+img{
+    width: 100%;
 }
 
 .container {
