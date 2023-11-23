@@ -1,3 +1,9 @@
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css");
+/*
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+*/
 :root {
     /* Palette */
     --primary-solid: rgb(255, 51, 51);
@@ -287,13 +293,26 @@ footer nav ul li a:hover {
     font-size: var(--font-display);
     text-transform: uppercase;
 }
-
+/*
 .slider__items {
     display: flex;
-    gap: var(--spacing-24);
-    
+    gap: var(--spacing-24);  
+}*/
 
+iconify-icon{
+    color: var(--dark-bg-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
 }
+
+.glide__arrow--left {
+    left: 0;
+}
+
+.glide__arrow--right {
+    right: 0;
+}
+
 
 .card-item__cover {
     display:  flex;
@@ -362,6 +381,9 @@ footer nav ul li a:hover {
     display: none;    
 }
 
+.item {
+    display: flex;
+}
 /* FOOTER */
 
 .footer {
