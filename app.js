@@ -13,7 +13,7 @@ app.use (express.static('public'));
 
 app.use('/', mainRoutes);
 app.use('/', shopRoutes);
-app.use('/', adminRoutes);
+app.use('/admin', adminRoutes);
 app.use('/', authRoutes);
 
 app.get('/ping', (req,res) => res.send('pong'));
