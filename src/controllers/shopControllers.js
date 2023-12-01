@@ -4,9 +4,8 @@ const shopControllers ={
     item: (req,res) => res.render('pages/shop/item'),
     itemId : (req,res) => res.render('pages/shop/item'),
     itemIdAdd : (req,res) => res.render('pages/shop/item'),
-    getCart :(req,res) => res.render('pages/admin/cart'),
-    postCart:(req,res) => res.render('pages/admin/cart'),
- 
+    getCart :(req,res) => res.render('pages/shop/cart'),
+    postCart:(req,res) => res.render('pages/shop/cart'),
 }
 
 module.exports = shopControllers;

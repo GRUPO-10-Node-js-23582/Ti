@@ -396,6 +396,9 @@ iconify-icon{
     justify-content: space-between;
     align-items: center;
 }
+.navbar-nav{
+    align-items: center;
+}
 
 .navbar__link{
     font-size: var(--font-medium);

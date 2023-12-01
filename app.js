@@ -12,9 +12,9 @@ app.set('views', path.join(__dirname, './src/views'));
 app.use (express.static('public'));
 
 app.use('/', mainRoutes);
-app.use('/shop', shopRoutes);
-app.use('/admin', adminRoutes);
-app.use('/auth', authRoutes);
+app.use('/', shopRoutes);
+app.use('/', adminRoutes);
+app.use('/', authRoutes);
 
 app.get('/ping', (req,res) => res.send('pong'));
 
