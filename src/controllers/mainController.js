@@ -1,9 +1,19 @@
 const {getAllItems} = require('../models/productModel');
+const {getProductById}  = require('../services/productServices');
+const {getItem} = require('../models/productModel');
 
 const mainControllers ={
     inicio: async (req,res) =>{
-        const datos = await getAllItems();
+        const id = req.params.id;
+
+        const datos = await getProductById(id);
         console.log('Datos mainController ' , datos);
+        if (datos.isError){
+            return  res.status(500).send({
+              message : ' Houston we got a problem ',
+              error : datos.message
+          });
+          }
         res.send({
             info: ' Route desde el main controller',
             data: datos

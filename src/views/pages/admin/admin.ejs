@@ -14,96 +14,46 @@
 </head>
 
 <body>
-<!--
-<header>
 
-        <nav class="navbar navbar-expand-lg navbar p-4">
-            <div class="container-fluid">
-                <a class="navbar-brand fs-4" href="../../index.html">
-                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item with-submenu">
-                            <a class="nav-link active fs-4 mx-3" href="../shop/shop.html">SHOP <iconify-icon
-                                    icon="prime:chevron-down"></iconify-icon></a>
-                            <ul class="submenu">
-                                <li class="submenu_item">
-                                    <a href="" class="submenu_link">Funkos</a>
-                                </li>
-                                <li class="submenu_item">
-                                    <a href="" class="submenu_link">Remeras</a>
-                                </li>
-                                <li class="submenu_item">
-                                    <a href="" class="submenu_link">Llaveros</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active fs-4 mx-3" href="../admin/register.html">REGISTRARSE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active fs-4 mx-3" href="../admin/contact.html">CONTACTO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active fs-4 mx-3" href="../admin/login.html">LOGIN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active fs-4 mx-3" href="../admin/cart.html">
-                                <img src="../../img/icons/cart-icon.svg" alt="icono de carrito">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    
-    </header>
--->
-    
 <%-include('../../partials/headerAdmin')-%>
 
-<h1 style="text-align: center;" > LISTADO DE PRODUCTOS </h1>
-<!--
-<footer class="container-fluid">
-    <br>
-    <div class="d-flex justify-content-around">
-        <nav>
-            <ul>
-                <li>
-                    <a href="../shop/shop.html">SHOP</a>
-                </li>
-                <li>
-                    <a href="../admin/register.html">REGISTRARSE</a>
-                </li>
-                <li>
-                    <a href="../admin/contact.html">CONTACTO</a>
-                </li>
-                <li>
-                    <a href="../admin/login.html">LOGIN</a>
-                </li>
-            </ul>
-        </nav>
-        <br>
-        <div class="icono text-center mt-4">
-            <a href="#" target="_blank" class="fa fa-facebook mx-4 text-white"></a>
-            <a href="#" class="fa fa-twitter mx-4 text-white"></a>
-            <a href="#" target="_blank" class="fa fa-instagram mx-4 text-white"></a>
+<main id="admin" class="container">
+    <section class="admin_search">
+        <iconify-icon class="admin_icon" icon="charm:search"></iconify-icon>
+        <input class="admin_search-bar" type="text" name="search" id="search" placeholder="codigo">
+    </section>
+    <section class="admin_list">
+        <div class="admin_header">
+            <h2 style="text-align: center;" > LISTADO DE PRODUCTOS </h2>
+            <span>AGREGAR<a href="/admin/create"> IR <iconify-icon icon="bx:plus-square" style="color: brown;"></iconify-icon></a></span>
         </div>
-        <br>
-        <img src="../../img/branding/isotype.svg" alt="Isotipo de la marca Funkopop">
-    </div>
-    <br>
-    <p class="text-center text-white fs-5 mb-2">All rights reserved 2023 - Funkoshop &copy</p>
-</footer>
--->
+        <div class="admin_table">
+            <header class="admin_table_header">
+                <h3>ID</h3>
+                <h3>Codigo</h3>
+                <h3>Nombre del Producto</h3>
+                <h3>Categoria</h3>
+            </header>
+            <% items.forEach(item => { %>
+                <article class="admin-table__row">
+                    <p><%= item.product_id %></p>
+                    <p><%= item.sku %></p>
+                    <p><%= item.product_name %></p>
+                    <p><%= item.product_id %></p>
+                    <a href="/admin/edit/<%= item.product_id %>"><iconify-icon icon="mdi:pencil"></iconify-icon> </a>
+                    <form action="/admin/delete/<%= item.product_id %>? _method=DELETE" method="POST">
+                        <button class="admin-table__btn-delete" type="submit">
+                            <iconify-icon icon="heroicons-solid:trash" style="color: #f33;"></iconify-icon>
+                        </button>
+                    </form>
+                </article>
+
+            <%});%>
+        </div>
+    </section>
+</main>
 
 <%-include('../../partials/footerAdmin')-%>
-
 
 <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 <!--Links de JS bootstrap-->
