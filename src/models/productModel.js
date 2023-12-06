@@ -2,7 +2,7 @@ const { conn } = require('../config/conn');
 
 const getAllItems = async () => {
     try{
-        const [rows] = await conn.query('SELECT * FROM product;');   
+        const [rows] = await conn.query('SELECT * FROM product JOIN licence WHERE product.licence_id= licence.licence_id ORDER BY product.product_id ;');   
     //const data = await conn.query("SELECT table_name FROM information_schema.tables WHERE table_type='BASE TABLE'; " );
     return rows;
     }catch(error){

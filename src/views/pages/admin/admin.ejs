@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!--Link iconos redes-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-   <link rel="stylesheet" href="../../css/style.css">
+   <link rel="stylesheet" href="/css/style.css">
     <title>Admin | Funkoshop</title>
 </head>
 
@@ -39,7 +39,11 @@
                     <p><%= item.product_id %></p>
                     <p><%= item.sku %></p>
                     <p><%= item.product_name %></p>
-                    <p><%= item.product_id %></p>
+                    <p><%= item.licence_name %></p>
+                    <!--<p><%= item.licence_id %></p>
+                    <% if (item.licence_id == 2) {%> <p>STAR WARS</p> <% } else if  
+                    (item.licence_id == 1) {%> <p>POKEMON</p> <% } else {%>
+                          <p>HARRY POTTER</p>  <%}%>-->
                     <a href="/admin/edit/<%= item.product_id %>"><iconify-icon icon="mdi:pencil"></iconify-icon> </a>
                     <form action="/admin/delete/<%= item.product_id %>? _method=DELETE" method="POST">
                         <button class="admin-table__btn-delete" type="submit">
