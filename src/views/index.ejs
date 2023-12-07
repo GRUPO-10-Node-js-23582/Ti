@@ -25,7 +25,7 @@
         <article class="hero__content container">
             <h3 class="hero__title">Nuevos Ingresos </h3>
             <p class="hero__text">Descubrí el próximo Funko Pop de tu colección. </p>
-            <a class="hero__link" href="./pages/shop/shop.html">SHOP</a>
+            <a class="hero__link" href="/shop">SHOP</a>
         </article>
     </section>
     <main class="main-container">
@@ -34,12 +34,12 @@
             <article class="collection_content">
                 <h3 class="collection_title">STARS WARS & THE MANDALORIAN </h3>
                 <p class="collection_text"> Disfruta de una saga que sigue agregando personajes a Su coleccion</p>
-                <a class="collection_link" href="./pages/shop/shop.html">VER COLECCION</a>
+                <a class="collection_link" href="/shop">VER COLECCION</a>
 
             </article>
 
             <picture class="collection_cover">
-                <img src="./img/star-wars/baby-yoda-1.webp"
+                <img src="/img/star-wars/baby-yoda-1.webp"
                     alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian ">
             </picture>
         </section>
@@ -47,31 +47,31 @@
             <article class="collection_content">
                 <h3 class="collection_title">POKEMON INDIGO </h3>
                 <p class="collection_text">Atrapa todos los que puedas y disfruta de una coleccion llena de amigos</p>
-                <a class="collection_link" href="./pages/shop/shop.html">VER COLECCION</a>
+                <a class="collection_link" href="/shop">VER COLECCION</a>
 
             </article>
 
             <picture class="collection_cover">
-                <img src="./img/pokemon/vulpix-1.webp" alt="Figura coleccionable Funko de Vulpix de la serie Pokemon ">
+                <img src="/img/pokemon/vulpix-1.webp" alt="Figura coleccionable Funko de Vulpix de la serie Pokemon ">
             </picture>
         </section >
         <section class="collection container">
             <article class="collection_content">
                 <h3 class="collection_title">HARRY POTTER </h3>
                 <p class="collection_text">Revive los recuerdos de un saga llena de magia y encantos</p>
-                <a class="collection_link" href="./pages/shop/shop.html">VER COLECCION</a>
+                <a class="collection_link" href="/shop">VER COLECCION</a>
 
             </article>
 
             <picture class="collection_cover" >
-                <img src="./img/harry-potter/snape-patronus-1.webp"
+                <img src="/img/harry-potter/snape-patronus-1.webp"
                     alt="Figura coleccionable Funko del Patronus de Snape de la pelicula de Harry Potter. ">
             </picture>
         </section>
         <section class="slider container glide">
             <h2 class="slider__title">ULTIMOS LANZAMIENTOS</h2>
             <div class="glide__track" data-glide-el="track">
-                <ul class="slider__items glide__slides" >
+              <!--  <ul class="slider__items glide__slides" >
                     <li class="slider__item glide__slide">
                         <article class="card-item">
                             <a class="card-item__link" href="">
@@ -129,6 +129,29 @@
                             </a>
                         </article>
                     </li>
+                </ul> -->
+                <ul class="slider__items glide__slides ">
+                    <% items.forEach( item => { %>
+                        <li class="slider__item glide__slide">
+                            <article class="card-item">
+                                <a class="card-item__link" href="/item/<%= item.product_id%>">
+                                    <picture class="card-item__cover">
+                                        <span class="card-item__tag">Nuevo</span>
+                                        <img class="card-item__img--front" src="/img<%= item.image_front%>"
+                                        alt="<%= item.product_description%>">
+                                        <img class="card-item__img--back" src="/img<%= item.image_back%>"
+                                        alt="<%= item.product_description%>">
+                                    </picture>
+                                    <div class="card-item__content">
+                                        <p class="card-item__license"><%= item.licence_name%></p>
+                                        <h4 class="card-item__name"><%= item.product_name%></h4>
+                                        <p class="card-item__price"><%= item.price%></p>
+                                        <p class="card-item__promo"><%= item.dues%> CUOTAS SIN INTERES</p>
+                                    </div>
+                                </a>  
+                            </article>
+                        </li>
+                        <% }); %>
                 </ul>
             </div>
             <div class="glide__arrows" data-glide-el="controls">
