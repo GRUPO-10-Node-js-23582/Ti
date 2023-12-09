@@ -8,8 +8,10 @@ const authRoutes = require('./src/routes/authRoutes');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views'));
+//app.set('views' , path.resolve(__dirname, "./src/views"));
 
-app.use (express.static('public'));
+//app.use (express.static('public'));
+app.use(express.static(path.resolve(__dirname,"public")));
 
 app.use('/', mainRoutes);
 app.use('/', shopRoutes);

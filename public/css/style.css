@@ -300,6 +300,22 @@ footer nav ul li a:hover {
     gap: var(--spacing-24);  
 }*/
 
+.shop_content {
+    /*max-width: 1200px;*/
+    display:flex;
+    flex-direction:column;
+    gap: var(--spacing-36);
+    margin: var(--spacing-68) auto;
+}
+
+.shop_items {
+    max-width: 1200px;
+    display:flex;
+    flex-direction:row;
+    gap: var(--spacing-24);  
+}
+
+
 iconify-icon{
     color: var(--dark-bg-solid);
     font-size: var(--font-small);

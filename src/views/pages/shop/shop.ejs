@@ -74,9 +74,9 @@
 
     </aside>
     <main>
-        <section class="shop_content">
-            <ul class="shop_items">
-                <% items.forEach( item => { %>
+        <section class="shop_content container">
+            <ul class="shop_items ">
+                <% items.forEach( item => { %>           
                     <li class="shop_item">
                         <article class="card-item">
                             <a class="card-item__link" href="/item/<%= item.product_id%>">
@@ -95,7 +95,7 @@
                                 </div>
                             </a>  
                         </article>
-                    </li>
+                    </li>              
                     <% }); %>
             </ul>
             <div class="pagination">
@@ -110,7 +110,8 @@
         </section>
 
 
-        <section class="slider container">
+       <!--
+ <section class="slider container">
             <ul class="slider__items">
                 <li>
                     <article class="card-item">
@@ -293,6 +294,9 @@
             </ul>
 
         </section>
+       -->
+       
+
         <section>
             <pagination> </pagination>
         </section>
