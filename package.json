@@ -16,5 +16,13 @@
     "express": "^4.18.2",
     "mysql2": "^3.6.5",
     "path": "^0.12.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GRUPO-10-Node-js-23582/Ti.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GRUPO-10-Node-js-23582/Ti/issues"
+  },
+  "homepage": "https://github.com/GRUPO-10-Node-js-23582/Ti#readme"
 }
