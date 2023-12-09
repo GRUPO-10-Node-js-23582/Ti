@@ -19,7 +19,7 @@ const getAllItems = async () => {
 
 const getItem = async (params) => {
     try{
-        const [rows] = await conn.query('SELECT * FROM product WHERE  ?',params);
+        const [rows] = await conn.query('SELECT  * FROM product JOIN licence WHERE  product.product_id=?  AND product.licence_id= licence.licence_id',params);
         return rows;
     }catch(error){
         const e ={
