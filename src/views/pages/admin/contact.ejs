@@ -65,30 +65,31 @@
     <main class="main-content">
 
         <section>
-            <div class="form-container">
-                <form action="#">
-                    <div class="input-form">
-                        <label class="input-label" for="name">Nombre</label>
-                        <input class="input-text" name="name" type="text" />
-                    </div>
-                    <div class="input-form">
-                        <label class="input-label" for="email">Email</label>
-                        <input class="input-text" name="email" type="text" />
-                    </div>
-                    <div class="input-form">
-                        <label class="input-label" for="phone">Teléfono</label>
-                        <input class="input-text" name="phone" type="text" />
-                    </div>
-                    <div class="input-form">
-                        <label class="input-label" for="menssage">Mensaje</label>
-                        <textarea class="input-area" name="menssage" cols="20" rows="10"></textarea>
-                    </div>
-                    <div class="input-form">
-                        <button class="input-button">Enviar</button>
-                        <button class="input-button" type="reset">Borrar todo</button>
-                    </div>
-                </form>
-            </div>
+            <form action="#" class="form-container">
+                <h1 style="text-align: center;"> CONTACTANOS </h1>
+                <br>
+            
+                <!-- Campo de Nombre -->
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" required>
+            
+                <!-- Campo de Email -->
+                <label for="email">Email:</label>
+                <input type="text" name="email" required>
+            
+                <!-- Campo de telefono -->
+                <label for="phone">Teléfono:</label>
+                <input type="text" name="phone" required>
+            
+                <!-- Campo de mensaje -->
+                <textarea name="message" rows="10" cols="30" class="mt-5">Escriba su mensaje</textarea>
+            
+                <!-- Botón de Envío -->
+               <div class="container-fluid d-flex flex-row justify-content-center fs-5">
+                 <button type="submit" class="btn btn-success btn-lg mx-5 my-5 h-100 w-25 custom-btn border border-dark border-3">Enviar</button>
+                 <button type="reset" class="btn btn-danger btn-lg mx-5 my-5 h-100 w-25 custom-btn border border-dark border-3">Borrar todo</button>
+               </div>
+              </form>
         </section>
 
     </main>
