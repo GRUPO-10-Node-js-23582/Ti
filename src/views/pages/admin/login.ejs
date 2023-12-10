@@ -69,23 +69,23 @@
     <%-include('../../partials/headerAdmin')-%>
 
     
-<h1 style="text-align: center;"> INGRESAR A MI CUENTA </h1>
+    <form action="/procesar_formulario" method="post" class="form-container">
 
-
-  <form action="/procesar_formulario" method="post" class="form-container">
+        <h1 style="text-align: center;"> INGRESAR A MI CUENTA </h1>
+        <br>
+        
     
-
-    <!-- Campo de Usuario -->
-    <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario" name="usuario" required>
-
-    <!-- Campo de Contraseña -->
-    <label for="contrasena">Contraseña:</label>
-    <input type="password" id="contrasena" name="contrasena" required>
-
-    <!-- Botón de Envío -->
-    <input type="submit" value="Iniciar Sesión">
-  </form>
+        <!-- Campo de Usuario -->
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+    
+        <!-- Campo de Contraseña -->
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+    
+        <!-- Botón de Envío -->
+        <button type="submit" class="btn btn-success btn-lg mx-5 my-5 w-25 custom-btn border border-dark border-3">Iniciar sesión</button>
+      </form>
 
 
 
