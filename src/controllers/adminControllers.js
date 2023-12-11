@@ -1,5 +1,7 @@
 //const {getAllItems} = require('../models/productModel');
 const {getAllProducts}  = require('../services/productServices');
+const {createProduct}  = require('../services/productServices');
+//const { item } = require('./shopControllers');
 
 const adminControllers ={
    /* admin: async (req,res) =>{
@@ -28,12 +30,22 @@ const adminControllers ={
             items: data
         });
     },
-    getCreate: (req,res) => res.render('pages/admin/create'),
-    postCreate : (req,res) => res.render('pages/admin/create'),
+    getCreate:  (req,res) => res.render('pages/admin/create'),
+
+    postCreate : async (req,res) => {
+        console.log(" Sku desde el body ", req.body.sku);
+        const item = req.body;
+        console.log(" Item desde el body ", item);
+        
+        const product = await createProduct(item);
+        console.log(" Datos desde el adminCOntroller ", item);
+
+        res.redirect('pages/admin/admin');
+    },
     postEdit : (req,res) => res.render('pages/admin/edit'),
     putEdit :(req,res) => res.render('pages/admin/edit'),
     delete:(req,res) => res.render('pages/admin/admin'),
-  
+
  }
  
  module.exports = adminControllers;
