@@ -76,9 +76,65 @@
     <%-include('../../partials/header')-%>
    <main>
 
-    <body>
-    
-        <h1>Carrito de Compras</h1>
+    <style>
+        .carritoo #formularioPedido {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .carritoo table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .carritoo th,
+        .carritoo td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .carritoo th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .carritoo .actions,
+        .carritoo .cart-total,
+        .carritoo .discount {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .carritoo button {
+            background-color: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .carritoo a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+
+<body>
+
     <div class="carritoo">
         <form>
             <table>
@@ -105,23 +161,23 @@
                     </tr>
                 </tbody>
             </table>
-    
+
             <div class="actions">
                 <button type="button">Agregar Producto</button>
                 <button type="button">Eliminar Producto</button>
             </div>
-    
+
             <div class="cart-total">
                 <p>Total: $$ 1799,99</p>
             </div>
         </form>
-    
+
         <div id="formularioPedido">
             <h2>Detalles de Entrega</h2>
-        
+
             <label for="codigoPostal">Código Postal:</label>
             <input type="text" id="codigoPostal" placeholder="Ingrese su código postal">
-        
+
             <label for="opcionesEntrega">Opciones de Entrega:</label>
             <select id="opcionesEntrega">
                 <option value="estandar">Entrega Estándar</option>
@@ -130,19 +186,18 @@
             </select>
             <button type="button">OK</button>
         </div>
-        
-    
+
         <div class="discount">
             <h3>Cupón de Descuento</h3>
             <h5>Ingresa un código de cupón para obtener un descuento.</h5>
             <button type="button">Aplicar Cupón</button>
         </div>
-    
+
         <a href="/">Volver</a>
         <a>CONTINUAR CON LA COMPRA</a>
     </div>
-    
 
+</body>
 
 <!--
 <footer class="container-fluid">
