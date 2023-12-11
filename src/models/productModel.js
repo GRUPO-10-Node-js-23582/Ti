@@ -77,7 +77,7 @@ const edit = async (params,id) => {
 
 const deleteProduct = async (id) => {
     try {
-        const [rows] = await conn.query('DELETE FROM product WHERE ?;', id);
+        const [rows] = await conn.query('DELETE FROM product WHERE product_id = ?;', id);
         const result = {
             isError: false,
             message: ' Se elimino el producto correctamente',
