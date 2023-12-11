@@ -34,7 +34,7 @@ const getItem = async (params) => {
 
 const create = async (params) => {
     try{
-        const [rows] = await conn.query('INSERT INTO product (product_name, product_descripcion, price, stock, discount, sku, dues, image_front, image_back, licence_id, category_id) VALUES ?;',[params]);
+        const [rows] = await conn.query('INSERT INTO product (product_name, product_description, price, stock, discount, sku, dues, image_front, image_back, licence_id, category_id) VALUES ?;',[params]);
 
         const result = {
             isError: false,

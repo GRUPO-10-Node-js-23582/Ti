@@ -22,6 +22,7 @@ const createProduct = async (item) =>{
         licence_id: item.licence_id,
         category_id: item.category_id
     }
+    console.log(" COntenido desde productSchema ",productSchema);
     return await productModel.create([Object.values(productSchema)]);   
 } 
 

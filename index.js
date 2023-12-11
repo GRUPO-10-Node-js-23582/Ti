@@ -16,13 +16,15 @@ app.use(express.static(path.resolve(__dirname,"public")));
 
 //app.use(methodOverride('_method')); // para usar PUT y DELETE
 
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+
 app.use('/', mainRoutes);
 app.use('/', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/', authRoutes);
 
-app.use(express.urlencoded({extended: true}));
-app.use(express.json());
+
 
 app.get('/ping', (req,res) => res.send('pong'));
 
