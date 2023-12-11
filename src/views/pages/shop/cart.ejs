@@ -16,7 +16,7 @@
     <title>Cart | Funkoshop</title>
 </head>
 
-<body>
+
 
 
 
@@ -74,14 +74,75 @@
     -->
     
     <%-include('../../partials/header')-%>
-    <main>
-        <h3 class="card-item__name"> <%= item.product_name%> </h3>
+   <main>
 
-        </section>
-        <a href="/shop">Volver</a>
-        <a href="/shop">CONTINUAR CON LA COMPRA</a>
+    <body>
+    
+        <h1>Carrito de Compras</h1>
+    <div class="carritoo">
+        <form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>LICENSIA</th>
+                        <th></th>
+                        <th></th>
+                        <th>NOMBRE DE PRODUCTO</th>
+                        <th></th>
+                        <th></th>
+                        <th>PRECIO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HARRY POTTER</td>
+                        <th></th>
+                        <th></th>
+                        <td>LUNA LOVEGOOD LION MASK</td>
+                        <th></th>
+                        <th></th>
+                        <td>$ 1799,99.-</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <div class="actions">
+                <button type="button">Agregar Producto</button>
+                <button type="button">Eliminar Producto</button>
+            </div>
+    
+            <div class="cart-total">
+                <p>Total: $$ 1799,99</p>
+            </div>
+        </form>
+    
+        <div id="formularioPedido">
+            <h2>Detalles de Entrega</h2>
+        
+            <label for="codigoPostal">Código Postal:</label>
+            <input type="text" id="codigoPostal" placeholder="Ingrese su código postal">
+        
+            <label for="opcionesEntrega">Opciones de Entrega:</label>
+            <select id="opcionesEntrega">
+                <option value="estandar">Entrega Estándar</option>
+                <option value="express">Entrega Express</option>
+                <option value="urgente">Entrega Urgente</option>
+            </select>
+            <button type="button">OK</button>
+        </div>
+        
+    
+        <div class="discount">
+            <h3>Cupón de Descuento</h3>
+            <h5>Ingresa un código de cupón para obtener un descuento.</h5>
+            <button type="button">Aplicar Cupón</button>
+        </div>
+    
+        <a href="/">Volver</a>
+        <a>CONTINUAR CON LA COMPRA</a>
+    </div>
+    
 
-    </main>
 
 <!--
 <footer class="container-fluid">
@@ -132,4 +193,5 @@
 
     
 </body>
+</main>
 </html>
