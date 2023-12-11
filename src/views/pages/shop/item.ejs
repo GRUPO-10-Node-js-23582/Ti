@@ -95,44 +95,6 @@
             </article>
 </section>
 
-<!-- Sección de detalles del producto -->
-<section class="item">
-    <!-- ... (código existente) ... -->
-    <div class="item__cart">
-        <!-- Modificación: Agregar un atributo data-product-id al botón -->
-        <button class="item__submit btn btn--primary btn--medium" type="button" data-product-id="<%= item.product_id %>">
-            Agregar al carrito
-        </button>
-    </div>
-    <!-- ... (código existente) ... -->
-</section>
-
-<!-- Script para manejar la lógica de agregar al carrito -->
-<script>
-    // Supongamos que tienes un array llamado "carrito" para almacenar los elementos del carrito
-    const carrito = [];
-
-    // Función para agregar un producto al carrito
-    function addToCart(productId) {
-        // Buscar el producto en el array de items
-        const selectedProduct = items.find(item => item.product_id === productId);
-
-        // Agregar el producto al carrito
-        carrito.push(selectedProduct);
-
-        // Puedes realizar más lógica aquí, como actualizar la interfaz de usuario o enviar la información al servidor
-        console.log(`Producto ${productId} agregado al carrito.`);
-        console.log('Carrito actual:', carrito);
-    }
-
-    // Manejar clics en los botones de "Agregar al carrito"
-    document.querySelectorAll('.item__submit').forEach(button => {
-        button.addEventListener('click', function () {
-            const productId = this.getAttribute('data-product-id');
-            addToCart(productId);
-        });
-    });
-</script>
         <section class="slider container glide">
             <h2 class="slider__title">PRODUCTOS RELACIONADOS</h2>
             <div class="glide__track" data-glide-el="track">
