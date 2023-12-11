@@ -44,7 +44,7 @@ const editProduct = async (item,id) =>{
 } 
 
 const deleteProduct = async(id) => {
-    return await productModel.delete(id);
+    return await productModel.deleteProduct(id);
 }
 
 
