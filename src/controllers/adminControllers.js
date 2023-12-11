@@ -40,7 +40,7 @@ const adminControllers ={
         const product = await createProduct(item);
         console.log(" Datos desde el adminCOntroller ", item);
 
-        res.redirect('pages/admin/admin');
+        res.redirect('/admin/admin');
     },
     postEdit : (req,res) => res.render('pages/admin/edit'),
     putEdit :(req,res) => res.render('pages/admin/edit'),
