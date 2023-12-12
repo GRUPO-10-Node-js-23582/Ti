@@ -93,10 +93,6 @@
     flex: 1 1 clamp(250px, 30%, 30%);
 }
 
-.card-item{
-    
-}
-
 .card-item__cover {
     display: flex;
     position: relative;
