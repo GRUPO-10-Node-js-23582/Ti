@@ -299,7 +299,11 @@ footer nav ul li a:hover {
     display: flex;
     gap: var(--spacing-24);  
 }*/
-
+iconify-icon {
+    color: var(--dark-bg-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
+}
 
 /* FOOTER */
 
@@ -473,3 +477,8 @@ form {
       }
     }
 
+    .item {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-24);
+    }
