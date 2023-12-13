@@ -75,17 +75,14 @@
     
     <%-include('../../partials/header')-%>
    <main>
+    <body>
 
-   
-
-<body>
-
-    <div class="carritoo">
-        <form>
+    <div class="carrito">
+        <form id="carritoForm">
             <table>
                 <thead>
                     <tr>
-                        <th>LICENcIA</th>
+                        <th>LICENCIA</th>
                         <th></th>
                         <th></th>
                         <th>NOMBRE DE PRODUCTO</th>
@@ -104,16 +101,17 @@
                         <th></th>
                         <td>$ 1799,99.-</td>
                     </tr>
+                    <!-- Agrega más filas según sea necesario -->
                 </tbody>
             </table>
 
             <div class="actions">
-                <button type="button">Agregar Producto</button>
-                <button type="button">Eliminar Producto</button>
+                <button type="button" onclick="agregarProducto()">Agregar Producto</button>
+                <button type="button" onclick="eliminarProducto()">Eliminar Producto</button>
             </div>
 
             <div class="cart-total">
-                <p>Total: $$ 1799,99</p>
+                <p id="totalLabel">Total: $$ 1799,99</p>
             </div>
         </form>
 
@@ -124,7 +122,7 @@
             <input type="text" id="codigoPostal" placeholder="Ingrese su código postal">
 
             <label for="opcionesEntrega">Opciones de Entrega:</label>
-            <select id="opcionesEntrega">
+            <select id="opcionesEntrega" onchange="calcularTotal()">
                 <option value="estandar">Entrega Estándar</option>
                 <option value="express">Entrega Express</option>
                 <option value="urgente">Entrega Urgente</option>
@@ -136,14 +134,14 @@
             <h3>Cupón de Descuento</h3>
             <h5>Ingresa un código de cupón para obtener un descuento.</h5>
             <input type="text" id="Cupon" placeholder="NAVIDADSHOP2023">
-            <button type="button" onclick="abrirCupon()">Aplicar Cupón</button>
+            <button type="button" onclick="aplicarCupon()">Aplicar Cupón</button>
         </div>
 
         <a href="/">Volver</a>
         <a href="#" onclick="continuarCompra()">CONTINUAR CON LA COMPRA</a>
-
     </div>
-<script>
+
+    <script>
         function abrirFormulario() {
             // Abre el archivo de texto para completar la información del formulario de pedido.
             window.open('formulario_pedido.txt', '_blank');
@@ -157,6 +155,41 @@
         function continuarCompra() {
             // Agrega aquí la lógica para continuar con la compra.
             alert('Continuar con la compra...');
+        }
+
+        function agregarProducto() {
+            // Agrega aquí la lógica para agregar productos al carrito.
+        }
+
+        function eliminarProducto() {
+            // Agrega aquí la lógica para eliminar productos del carrito.
+        }
+
+        function calcularTotal() {
+            // Agrega aquí la lógica para calcular el total basado en la opción de entrega seleccionada.
+            var total = 1799.99; // Precio inicial
+            var opcionesEntrega = document.getElementById('opcionesEntrega');
+            var selectedOption = opcionesEntrega.options[opcionesEntrega.selectedIndex].value;
+
+            // Agrega lógica adicional según las opciones de entrega
+            if (selectedOption === 'express') {
+                total += 200; // Costo adicional por entrega express
+            } else if (selectedOption === 'urgente') {
+                total += 400; // Costo adicional por entrega urgente
+            }
+
+            document.getElementById('totalLabel').innerText = 'Total: $$ ' + total.toFixed(2);
+        }
+
+        function aplicarCupon() {
+            // Agrega aquí la lógica para aplicar el descuento del cupón.
+            var cuponInput = document.getElementById('Cupon');
+            var cupon = cuponInput.value;
+
+            // Agrega lógica para aplicar descuento según el cupón ingresado
+            // Puedes utilizar una API, base de datos o lógica en el lado del servidor para verificar el cupón.
+            // En este ejemplo, simplemente mostraremos un mensaje de alerta.
+            alert('Descuento aplicado con éxito para el cupón: ' + cupon);
         }
     </script>
 
