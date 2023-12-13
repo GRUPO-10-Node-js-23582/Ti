@@ -136,18 +136,6 @@
 
     <script>
        
-
-        function abrirCupon() {
-            // Abre el archivo de texto para ingresar el código de cupón.
-            window.open('cupon_descuento.txt', '_blank');
-        }
-
-    
-
-      
-
-        
-
         function calcularTotal() {
 
             var total = 1799.99; // Precio inicial
@@ -160,9 +148,12 @@
                 total += 400; // Costo adicional por entrega urgente
             }
 
-            document.getElementById('totalLabel').innerText = 'Total: $$ ' + total.toFixed(2);
+            console.log('Total actualizado:', total.toFixed(2));
         }
 
+        function continuarCompra() {
+            alert('Continuar con la compra...');
+        }
         function aplicarCupon() {
             var cuponInput = document.getElementById('Cupon');
             var cupon = cuponInput.value;
