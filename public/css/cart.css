@@ -1,91 +1,81 @@
-.carritoo #formularioPedido {
-            background-color: #fff;
+.carrito {
+            background-color: white;
             padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
         }
 
-        .carritoo table {
+      .carrito  table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        .carritoo th,
-        .carritoo td {
+       .carrito th, td {
             padding: 10px;
-            text-align: left;
             border-bottom: 1px solid #ddd;
+            text-align: left;
         }
 
-        .carritoo th {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .carritoo .actions,
-        .carritoo .cart-total,
-        .carritoo .discount {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .carritoo button {
-            background-color: #333;
-            color: #fff;
-            padding: 8px 16px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .carritoo a {
-            display: block;
-            margin: 10px 0;
+        .carrito .actions button {
             padding: 10px;
+            margin-right: 10px;
             background-color: #333;
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-       .carritoo  #formularioPedido,
-        .discount,
-        a {
-            text-align: center;
-            margin: 20px;
-        }
-
-        .carritoo #formularioPedido label,
-        .carritoo #formularioPedido select,
-        .carritoo #formularioPedido input,
-        .carritoo  .discount input {
-            margin-bottom: 10px;
-        }
-
-        .carritoo #formularioPedido button, .carritoo 
-        .discount button,
-        .carritoo a {
-            padding: 10px;
-            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
 
-       .carritoo  #formularioPedido button:hover,
-        .carritoo .discount button:hover, .carritoo 
-        a:hover {
-            background-color: #45a049;
+       .carrito  .cart-total {
+            text-align: right;
         }
 
+       .carrito #formularioPedido, .carrito 
+        .discount,
+       .carrito a {
+            margin-top: 20px;
+        }
 
+       .carrito  input[type="text"],
+        .carrito select,
+       .carrito  button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
 
+        .carrito .discount input {
+            margin-bottom: 10px;
+        }
+
+        .carrito button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+       .carrito  button:hover {
+            background-color: #c9302c;
+        }
+
+        .carrito a {
+            display: block;
+            text-align: center;
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 4px;
+        }
+
+       .carrito  a:hover {
+            background-color: #ccc;
+        }
 
 
 
