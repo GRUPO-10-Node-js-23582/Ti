@@ -24,7 +24,8 @@ const authControllers ={
 		} else if(!(await crypt.compare(password, valido.password))){
 			res.redirect('/auth/login/?error=1')
 		} else {
-			//req.session.userid = valido.user_id
+			req.session.user_id = valido.user_id
+            console.log("Este es el user_id despues de la session : ", req.session.user_id);
 			res.redirect(`/home?user=${valido.user_id}`)
 		}
 	},
@@ -35,11 +36,25 @@ const authControllers ={
         res.redirect('/')
     },
     
-    getUsers: async(req,res) => {
+   /* getUsers: async(req,res) => {
         const data = await getAllUsers();
         console.log( ' Datos del authController ' , data);
         //res.send( " Estamos viniendo desde el POST register " , data);
         res.redirect('/')
+    },*/
+    getUsers: async (req,res) =>{
+        const datos = await getAllUsers();
+        //console.log('Datos adminController ' , datos);
+        if (datos.isError){
+          return  res.status(500).send({
+            message : ' Houston we got a problem ',
+            error : datos.message
+        });
+        }
+        return res.send({
+            info: ' Route desde el admin controller',
+            data: datos
+        });
     },
 
     logout :(req,res) => res.render('pages/admin/login'), 

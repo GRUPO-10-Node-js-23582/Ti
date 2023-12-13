@@ -33,7 +33,12 @@ const mainControllers ={
             items: data
         });
     },
-    home: (req,res) => res.send('Route for Home view from controller SE LOGRA LOGEAR CORRECTAMENTE  !!!! '),
+    home: (req,res) => {
+        res.writeHead(200,{
+            'Content-Type':'text/html;charset=UTF-8'
+        });
+        res.end('<h1 style=aligne-center>Route for Home view from controller \n SE LOGRA LOGEAR CORRECTAMENTE  !!!!  </h1>');
+    },
     contact:  (req,res) => res.render('pages/admin/contact'),
     about: (req,res) => res.send('Route for About view from controller'),
     faqs: (req,res) => res.send('Route for Faqs view from controller'),

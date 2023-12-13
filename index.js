@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path')
 const app = express();
 const methodOverride = require('method-override');
+const session = require('express-session');
 const mainRoutes = require('./src/routes/mainRoutes');
 const shopRoutes = require('./src/routes/shopRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
@@ -11,6 +12,11 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views'));
 //app.set('views' , path.resolve(__dirname, "./src/views"));
 
+app.use(session({
+    secret: "S3cr3t10H@sh",
+    resave: false,
+    saveUninitialized: false,
+}));
 //app.use (express.static('public'));
 app.use(express.static(path.resolve(__dirname,"public")));
 
