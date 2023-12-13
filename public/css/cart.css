@@ -52,3 +52,46 @@
             text-decoration: none;
             border-radius: 8px;
         }
+
+       .carritoo  #formularioPedido,
+        .discount,
+        a {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .carritoo #formularioPedido label,
+        .carritoo #formularioPedido select,
+        .carritoo #formularioPedido input,
+        .carritoo  .discount input {
+            margin-bottom: 10px;
+        }
+
+        .carritoo #formularioPedido button, .carritoo 
+        .discount button,
+        .carritoo a {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+       .carritoo  #formularioPedido button:hover,
+        .carritoo .discount button:hover, .carritoo 
+        a:hover {
+            background-color: #45a049;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
