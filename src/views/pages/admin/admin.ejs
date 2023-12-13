@@ -10,6 +10,7 @@
     <!--Link iconos redes-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
    <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="/css/admin.css">
     <title>Admin | Funkoshop</title>
 </head>
 
@@ -19,21 +20,24 @@
 
 <main id="admin" class="container">
     <section class="admin_search">
-        <iconify-icon class="admin_icon" icon="charm:search"></iconify-icon>
-        <input class="admin_search-bar" type="text" name="search" id="search" placeholder="codigo">
+        <iconify-icon class="admin__icon" icon="charm:search"></iconify-icon>
+        <input class="admin__search-bar" type="text" name="search" id="search" placeholder="codigo">
     </section>
-    <section class="admin_list">
-        <div class="admin_header">
+    <section class="admin__list">
+        <div class="admin__header">
             <h2 style="text-align: center;" > LISTADO DE PRODUCTOS </h2>
-            <span>AGREGAR<a href="/admin/create"> IR <iconify-icon icon="bx:plus-square" style="color: brown;"></iconify-icon></a></span>
+            <span>AGREGAR<a href="/admin/create"><iconify-icon icon="bxs:plus-square" style="color: #f33;"></iconify-icon></a></span>
         </div>
-        <div class="admin_table">
-            <header class="admin_table_header">
+            <header class="admin-table__header">
                 <h3>ID</h3>
                 <h3>Codigo</h3>
                 <h3>Nombre del Producto</h3>
                 <h3>Categoria</h3>
             </header>
+        
+        <div class="admin-table">
+            
+
             <% items.forEach(item => { %>
                 <article class="admin-table__row">
                     <p><%= item.product_id %></p>
