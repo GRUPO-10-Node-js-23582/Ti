@@ -80,12 +80,12 @@
 
 <body>
 
-    <div class="carritoo">
+    <div class="carrito">
         <form>
             <table>
                 <thead>
                     <tr>
-                        <th>LICENcIA</th>
+                        <th>LICENCIA</th>
                         <th></th>
                         <th></th>
                         <th>NOMBRE DE PRODUCTO</th>
@@ -129,18 +129,35 @@
                 <option value="express">Entrega Express</option>
                 <option value="urgente">Entrega Urgente</option>
             </select>
-            <button type="button">OK</button>
+            <button type="button" onclick="abrirFormulario()">OK</button>
         </div>
 
         <div class="discount">
             <h3>Cupón de Descuento</h3>
             <h5>Ingresa un código de cupón para obtener un descuento.</h5>
-            <button type="button">Aplicar Cupón</button>
+            <button type="button" onclick="abrirCupon()">Aplicar Cupón</button>
         </div>
 
         <a href="/">Volver</a>
-        <a>CONTINUAR CON LA COMPRA</a>
+        <a href="#" onclick="continuarCompra()">CONTINUAR CON LA COMPRA</a>
     </div>
+
+    <script>
+        function abrirFormulario() {
+            // Abre el archivo de texto para completar la información del formulario de pedido.
+            window.open('formulario_pedido.txt', '_blank');
+        }
+
+        function abrirCupon() {
+            // Abre el archivo de texto para ingresar el código de cupón.
+            window.open('cupon_descuento.txt', '_blank');
+        }
+
+        function continuarCompra() {
+            // Agrega aquí la lógica para continuar con la compra.
+            alert('Continuar con la compra...');
+        }
+    </script>
 
 </body>
 
