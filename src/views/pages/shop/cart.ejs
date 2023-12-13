@@ -106,8 +106,8 @@
             </table>
 
             <div class="actions">
-                <button type="button" onclick="agregarProducto()">Agregar Producto</button>
-                <button type="button" onclick="eliminarProducto()">Eliminar Producto</button>
+                <button type="button" onclick="/shop">Agregar Producto</button>
+                <button type="button" >Eliminar Producto</button>
             </div>
 
             <div class="cart-total">
@@ -153,25 +153,20 @@
         }
 
         function continuarCompra() {
-            // Agrega aquí la lógica para continuar con la compra.
+
             alert('Continuar con la compra...');
         }
 
-        function agregarProducto() {
-            // Agrega aquí la lógica para agregar productos al carrito.
-        }
+      
 
-        function eliminarProducto() {
-            // Agrega aquí la lógica para eliminar productos del carrito.
-        }
+        
 
         function calcularTotal() {
-            // Agrega aquí la lógica para calcular el total basado en la opción de entrega seleccionada.
+
             var total = 1799.99; // Precio inicial
             var opcionesEntrega = document.getElementById('opcionesEntrega');
             var selectedOption = opcionesEntrega.options[opcionesEntrega.selectedIndex].value;
 
-            // Agrega lógica adicional según las opciones de entrega
             if (selectedOption === 'express') {
                 total += 200; // Costo adicional por entrega express
             } else if (selectedOption === 'urgente') {
@@ -182,13 +177,10 @@
         }
 
         function aplicarCupon() {
-            // Agrega aquí la lógica para aplicar el descuento del cupón.
             var cuponInput = document.getElementById('Cupon');
             var cupon = cuponInput.value;
 
-            // Agrega lógica para aplicar descuento según el cupón ingresado
-            // Puedes utilizar una API, base de datos o lógica en el lado del servidor para verificar el cupón.
-            // En este ejemplo, simplemente mostraremos un mensaje de alerta.
+            
             alert('Descuento aplicado con éxito para el cupón: ' + cupon);
         }
     </script>
