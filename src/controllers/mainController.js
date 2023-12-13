@@ -24,7 +24,7 @@ const mainControllers ={
     //inicio:(req,res) => res.render('index'),
     inicio: async(req,res) => {
         const data = await getAllProducts();
-        console.log( ' Datos del mainController ' , data);
+        //console.log( ' Datos del mainController ' , data);
         res.render('index' , 
         {
             view:{
@@ -33,7 +33,7 @@ const mainControllers ={
             items: data
         });
     },
-    home: (req,res) => res.send('Route for Home view from controller'),
+    home: (req,res) => res.send('Route for Home view from controller SE LOGRA LOGEAR CORRECTAMENTE  !!!! '),
     contact:  (req,res) => res.render('pages/admin/contact'),
     about: (req,res) => res.send('Route for About view from controller'),
     faqs: (req,res) => res.send('Route for Faqs view from controller'),

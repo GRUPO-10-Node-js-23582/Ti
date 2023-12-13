@@ -23,7 +23,7 @@ const adminControllers ={
     //admin: (req,res) => res.render('pages/admin/admin'),
     admin: async(req,res) => {
         const data = await getAllProducts();
-        console.log( ' Datos del adminController ' , data);
+        //console.log( ' Datos del adminController ' , data);
         res.render('pages/admin/admin' , 
         {
             view:{

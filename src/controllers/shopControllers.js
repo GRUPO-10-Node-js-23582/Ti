@@ -46,7 +46,7 @@ const shopControllers ={
             });
         }
         
-        console.log( ' Datos del shopController ' , results);
+       // console.log( ' Datos del shopController ' , results);
         return res.render('pages/shop/item' , 
         {
             view:{

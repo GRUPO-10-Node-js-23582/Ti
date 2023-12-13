@@ -69,23 +69,26 @@
     <%-include('../../partials/headerAdmin')-%>
 
     
-    <form action="/procesar_formulario" method="post" class="form-container">
+    <form action="/auth/login" method="POST" enctype="application/x-www-form-urlencoded" class="form-container">
 
         <h1 style="text-align: center;"> INGRESAR A MI CUENTA </h1>
         <br>
         
     
         <!-- Campo de Usuario -->
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
     
         <!-- Campo de Contraseña -->
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
     
         <!-- Botón de Envío -->
         <button type="submit" class="btn btn-success btn-lg mx-5 my-5 w-25 custom-btn border border-dark border-3">Iniciar sesión</button>
       </form>
+      <% if(error == 1) { %>
+		<p style="color: red">Usuario no encontrado, intente nuevamente</p>
+	<% } %>
 
 
 
