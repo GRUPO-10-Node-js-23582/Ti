@@ -23,17 +23,18 @@ const loginValidation =[
     .withMessage('El password debe tener al menos 6 caracteres y con letras y  numeros')
 ];
 const validacionRegistro = [
-	body("name")
+	body("email")
 	.isLength({min: 3})
 	.withMessage("Ingrese un nombre válido")
 	.bail()
 	.custom((value, {req}) => {
 			return new Promise(async (resolve, reject) => {
 				try {
-					const [usuarioExiste] = await conn.query(`SELECT * FROM user WHERE name = '${value}'`);
+					const [usuarioExiste] = await conn.query(`SELECT * FROM user WHERE email = '${value}'`);
                     console.log(" Este es el value del custom :" , value);
                     console.log("Este es el usuario Existe " , usuarioExiste);
-					if(!usuarioExiste){
+					if(usuarioExiste){
+                        console.log(" el usuario ya esta en la base de datos ");
 						return reject()
 					} else {
 						return resolve()
@@ -59,7 +60,7 @@ const validacionRegistro = [
             body('password')
             .isLength({min:6})
             .isAlphanumeric()
-            .withMessage('El password debe tener al menos 6 caracteres y con letras y  numeros')
+            .withMessage('El password debe tener al menos 6 caracteres')
         ];
 
 router.get('/auth/login',getLogin);

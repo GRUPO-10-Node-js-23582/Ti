@@ -20,7 +20,7 @@ const authControllers ={
 		const [valido] = await verificarUser(email)
 		console.log("Esto sale del valido de postLogin : " ,valido)
 		if(valido === undefined){
-			res.redirect('/login/?error=1')
+			res.redirect('/auth/login/?error=1')
 		} else if(!(await crypt.compare(password, valido.password))){
 			res.redirect('/auth/login/?error=1')
 		} else {
