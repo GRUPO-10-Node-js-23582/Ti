@@ -87,7 +87,10 @@
         <button type="submit" class="btn btn-success btn-lg mx-5 my-5 w-25 custom-btn border border-dark border-3">Iniciar sesión</button>
       </form>
       <% if(error == 1) { %>
-		<p style="color: red">Usuario no encontrado, intente nuevamente</p>
+		<h3 style="color: red">Usuario no encontrado, intente nuevamente</h3>
+	<% } %>
+    <% if(error == 2) { %>
+		<h3 style="color: red"> Hay que loggearse para ingresar  a admin </h3>
 	<% } %>
 
 

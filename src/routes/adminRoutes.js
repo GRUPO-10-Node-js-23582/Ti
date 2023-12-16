@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const adminControllers = require('../controllers/adminControllers')
+const { isLogged } = require('../middlewares/auth');
 
-router.get('/admin',adminControllers.admin);
+router.get('/admin',isLogged,adminControllers.admin);
 router.get('/create',adminControllers.getCreate);
 router.post('/create', adminControllers.postCreate);
 router.get('/edit/:id', adminControllers.postEdit);

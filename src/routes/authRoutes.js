@@ -31,13 +31,19 @@ const validacionRegistro = [
 			return new Promise(async (resolve, reject) => {
 				try {
 					const [usuarioExiste] = await conn.query(`SELECT * FROM user WHERE email = '${value}'`);
-                    console.log(" Este es el value del custom :" , value);
-                    console.log("Este es el usuario Existe " , usuarioExiste);
-					if(usuarioExiste){
+                    console.log(" Este es el value del custom value:" , value);
+                    console.log("Este es el usuarioExiste " , usuarioExiste);
+                    if(usuarioExiste[0] != undefined){
+                        console.log("Este es el usuario usuarioExiste[0].email" , usuarioExiste[0].email);
+                    console.log("Este es la cond (usuarioExiste[0].email == value) " , usuarioExiste[0].email == value );
+                    }
+                    
+                    
+					if(usuarioExiste[0] != undefined && usuarioExiste[0].email == value ){
                         console.log(" el usuario ya esta en la base de datos ");
 						return reject()
 					} else {
-						return resolve()
+						return resolve() 
 					}
 				} catch (error) {
 					console.log(error)

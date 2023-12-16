@@ -26,14 +26,16 @@ const authControllers ={
 		} else {
 			req.session.user_id = valido.user_id
             console.log("Este es el user_id despues de la session : ", req.session.user_id);
-			res.redirect(`/home?user=${valido.user_id}`)
+            req.session.isLogged=true;
+			res.redirect('/admin/admin');
+            console.log(" despues de redirigir ");
 		}
 	},
     getRegister : (req,res) => res.render('pages/admin/register'),
     //postRegister : (req,res) => res.render('pages/admin/register'),
     postRegister: async (req,res) => {
         const usuario = await createUser(req.body.name,req.body.lastname ,req.body.email,req.body.password)
-        res.redirect('/')
+        res.redirect('/admin/admin');
     },
     
    /* getUsers: async(req,res) => {
@@ -57,7 +59,11 @@ const authControllers ={
         });
     },
 
-    logout :(req,res) => res.render('pages/admin/login'), 
+    logout :(req,res) => {
+        req.session.isLogged=false;
+        console.log("el isLogged despues de logout : ", req.session.isLogged);
+        res.redirect('/')
+    } 
  }
  
  module.exports = authControllers;
