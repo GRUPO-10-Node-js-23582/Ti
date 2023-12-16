@@ -7,7 +7,7 @@ const authControllers ={
     // inicio: (req,res) => res.render('index'),
     //getLogin: (req,res) => res.render('pages/admin/login'),
     getLogin: (req, res) => {
-		res.render('pages/admin/login', {
+		res.render('pages/admin/login2', {
 			title: 'Login',
 			error: req.query.error
 		})
