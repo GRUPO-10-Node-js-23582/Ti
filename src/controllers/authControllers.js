@@ -31,7 +31,7 @@ const authControllers ={
             console.log(" despues de redirigir ");
 		}
 	},
-    getRegister : (req,res) => res.render('pages/admin/register'),
+    getRegister : (req,res) => res.render('pages/admin/register2'),
     //postRegister : (req,res) => res.render('pages/admin/register'),
     postRegister: async (req,res) => {
         const usuario = await createUser(req.body.name,req.body.lastname ,req.body.email,req.body.password)

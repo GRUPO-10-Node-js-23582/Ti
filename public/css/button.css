@@ -1,4 +1,9 @@
 
+.btn {
+    border: none;
+    cursor: pointer;
+}
+
 .btn--primary {
     /*background-color: var(--primary-solid);*/
     background-color:rgb(255, 51, 51);
