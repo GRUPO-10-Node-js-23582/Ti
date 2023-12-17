@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, './src/views'));
 app.use(session({
     secret: "S3cr3t10H@sh",
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
 }));
 //app.use (express.static('public'));
 app.use(express.static(path.resolve(__dirname,"public")));
