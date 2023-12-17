@@ -75,94 +75,16 @@
     
     <%-include('../../partials/header')-%>
    <main>
+
     <body>
-
-    <div class="carrito">
-        <form id="carritoForm">
-            <table>
-                <thead>
-                    <tr>
-                        <th>LICENCIA</th>
-                        <th>NOMBRE DE PRODUCTO</th>
-                        <th>PRECIO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>HARRY POTTER</td>
-                        
-                        <td>LUNA LOVEGOOD LION MASK</td>
-                      
-                        <td>$ 1799,99.-</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-
-            <div class="actions">
-                <button type="button" onclick="/shop">Agregar Producto</button>
-                <button type="button" >Eliminar Producto</button>
-            </div>
-
-            <div class="cart-total">
-                <p id="totalLabel">Total: $$ 1799,99</p>
-            </div>
-        </form>
-
-        <div id="formularioPedido">
-            <h2>Detalles de Entrega</h2>
-
-            <label for="codigoPostal">Código Postal:</label>
-            <input type="text" id="codigoPostal" placeholder="Ingrese su código postal">
-
-            <label for="opcionesEntrega">Opciones de Entrega:</label>
-            <select id="opcionesEntrega" onchange="calcularTotal()">
-                <option value="estandar">Entrega Estándar</option>
-                <option value="express">Entrega Express</option>
-                <option value="urgente">Entrega Urgente</option>
-            </select>
+        <header>
+        <div class="cart">
+        <h1 >CARRITO DE COMPRAS</h1>
         </div>
+        </header>
+    </body>
 
-        <div class="discount">
-            <h3>Cupón de Descuento</h3>
-            <h5>Ingresa un código de cupón para obtener un descuento.</h5>
-            <input type="text" id="Cupon" placeholder="NAVIDADSHOP2023">
-            <button type="button" onclick="aplicarCupon()">Aplicar Cupón</button>
-        </div>
-
-        <a href="/">Volver</a>
-        <a href="#" onclick="continuarCompra()">CONTINUAR CON LA COMPRA</a>
-    </div>
-
-    <script>
-       
-        function calcularTotal() {
-
-            var total = 1799.99; // Precio inicial
-            var opcionesEntrega = document.getElementById('opcionesEntrega');
-            var selectedOption = opcionesEntrega.options[opcionesEntrega.selectedIndex].value;
-
-            if (selectedOption === 'express') {
-                total += 200; // Costo adicional por entrega express
-            } else if (selectedOption === 'urgente') {
-                total += 400; // Costo adicional por entrega urgente
-            }
-
-            console.log('Total actualizado:', total.toFixed(2));
-        }
-
-        function continuarCompra() {
-            alert('Continuar con la compra...');
-        }
-        function aplicarCupon() {
-            var cuponInput = document.getElementById('Cupon');
-            var cupon = cuponInput.value;
-
-            alert('Descuento aplicado con éxito para el cupón);
-        }
-    </script>
-
-</body>
+   
 <!--
 <footer class="container-fluid">
     <br>
