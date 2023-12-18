@@ -49,7 +49,7 @@ const adminControllers ={
         const id = req.params.id;
         const  data  = await getProductById(id);
         console.log( " Data desde el getProductById" , data);
-        res.render('pages/admin/edit', {
+        res.render('pages/admin/edit2', {
           view: {
             title: `Edit Product #${id} | Admin Funkoshop`
           },
