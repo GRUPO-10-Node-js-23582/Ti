@@ -1,85 +1,194 @@
-.carrito {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            text-align: center;
-        }
+.carrito{
+    margin: 50px 62px;
+    padding-bottom: 700px;
 
-      .carrito  table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 15px;
-        }
+}
+.tit-carrito {
+    margin: 50px 62px;
+    border-bottom: 5px solid #FF3333;
+    width: Hug (506px);
+    height: Hug (60px);
+    top: 272px;
+    left: 110px;
+    padding: 0px, 0px, 8px, 0px;
+    border: 0px, 0px, 5px, 0px;
+    gap: 10px;
+    
+  }
+  
+  .tit-carrito .h1 {
+    width: 506px;
+    height: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 100px; /* Ajustado el tamaño de la fuente */
+    font-weight: 900; /* Ajustado el grosor de la fuente */
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+.pcarrito {
+    width: 1100px;
+    height: 51px;
+    top: 394.15px;
+    left: 110px;
+    margin: 50px 62px; /* Ajustado el margen superior e inferior, centrado horizontalmente */
+    border-radius: 10px;
+    background: #FAFAFF;
+    box-shadow: 0px 0px 10px 0px #00000040;
+  }
+  
+  .pcarrito .container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0; /* Eliminado el margen superior del container */
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    top: 16px;
+    height: 19px;
+    margin-bottom: 50px;
+    align-content: center; /* Agregado margen inferior para espacio entre .container y .detalles */
+  }
+  
+  .pcarrito .column1 {
+    width: 190px;
+  }
+  
+  .pcarrito .column2 {
+    width: 45px;
+  }
+  
+  .pcarrito .column3 {
+    width: 200px;
+  }
+  
+  .pcarrito .detalles {
+    display: flex;
+    width: 1100px;
+    height: 195px;
+    margin: 20px auto; /* Ajustado el margen superior e inferior, centrado horizontalmente */
+    padding: 16px;
+    border-radius: 25px;
+    justify-content: space-between;
+    background: #FAFAFF;
+    box-shadow: 0px 0px 10px 0px #00000040;
+    
+  }
+  .pcarrito .cantidad,
+.pcarrito .precioo, .pcarrito .borrar-btn {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 50%; /* Ajusta según tus necesidades */
+  height: 105px;
+  gap: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+  .pcarrito .item1 {
+    flex: 0 0 auto; /* Evita que el elemento crezca, pero permite que se reduzca */
+    width: auto; /* Permite que el ancho sea determinado por el contenido */
+    max-width: 60%; /* Establece un ancho máximo para evitar que tome todo el espacio */
+    height: 118px; /* Establece la altura del elemento */
+    gap: 18px;
+    display: flex; /* Aplica un modelo de caja flexible */
+    align-items: center;
+  }
+  .pcarrito .item1 .h3{
+    flex: 1;
+    width: 272.75px;
+    height: 29px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;   
+  }
+  .pcarrito .item1 .h5{
+    width: 81.52px;
+    height: 17px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
 
-       .carrito th, td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-            text-align: left;
-        }
+  }
+  .pcarrito .card-item__img--front{
+    width: 118.76px;
+    height: 118px;
 
-        .carrito .actions button {
-            padding: 10px;
-            margin-right: 10px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+  }
+.detalles .cantidad {  
+    height: 105px;
+    top: 477.15px;
+    left: 100px;
+    padding: 16px;
+    border-radius: 25px;
+    justify-content: space-between;
+    width: 1px;
+    display: flex;
+    align-items: center;
+  }
 
-       .carrito  .cart-total {
-            text-align: right;
-        }
-
-       .carrito #formularioPedido, .carrito 
-        .discount,
-       .carrito a {
-            margin-top: 20px;
-        }
-
-       .carrito  input[type="text"],
-        .carrito select,
-       .carrito  button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        .carrito .discount input {
-            margin-bottom: 10px;
-        }
-
-        .carrito button {
-            background-color: #d9534f;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-       .carrito  button:hover {
-            background-color: #c9302c;
-        }
-
-        .carrito a {
-            display: block;
-            text-align: center;
-            color: #333;
-            text-decoration: none;
-            padding: 10px;
-            background-color: #ddd;
-            border-radius: 4px;
-        }
-
-       .carrito  a:hover {
-            background-color: #ccc;
-        }
+  
+  .detalles #number {
+    width: 40px; /* Ajusta el ancho según tus preferencias */
+    height: 45px;
+    text-align: center;
+    margin: 0 0px; /* Añadido margen al input */
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .detalles #cant {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .detalles #increase, .detalles 
+  #decrease {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 3px 5px; /* Ajustado el padding */
+    margin: 1px 0px; /* Añadido margen a los botones */
+    font-size: 10px; /* Ajustado el tamaño de la fuente */
+    cursor: pointer;
+  }
+  .detalles .precioo{
+    height: 105px;
+    width: 99px;
+    gap: 20px;
+    align-items: center;
+  }
+  .detalles .precioo .h3{
+    width: 99px;
+height: 24px;
+font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
 
 
-
+  }
+.pcarrito .borrar-btn {
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    color: #ff0000; /* Color rojo en formato hexadecimal */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón para indicar interactividad */
+  }
+  
 
 
 
