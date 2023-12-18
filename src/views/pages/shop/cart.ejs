@@ -76,13 +76,83 @@
     <%-include('../../partials/header')-%>
    <main>
 
-    <body>
-        <header>
-        <div class="cart">
-        <h1 >CARRITO DE COMPRAS</h1>
+   <body>
+    <div class="carrito">
+    <div class="tit-carrito">
+        <h1>CARRITO DE COMPRAS</h1>
+    </div>
+    <div class="pcarrito">
+        <div class="container">
+            <div class="column1">
+              <h3>DETALLE DEL PRODUCTO</h3>
+            </div>
+          
+            <div class="column2">
+              <h3>CANTIDAD</h3>
+            </div>
+          
+            <div class="column3">
+              <h3>TOTAL</h3>
+            </div>
         </div>
-        </header>
-    </body>
+
+        <div class="detalles">
+            <div class="item1">
+              <img class="card-item__img--front" src="../../img/star-wars/baby-yoda-1.webp">
+              <div class="text-details">
+                <h3>BABY YODA BLUEBALL</h3>
+                <h5>STAR WARS</h5>
+                <h5>Precio: $ 1799,99</h5>
+              </div>
+            </div>
+          
+            <div class="cantidad">
+                <input id="number" value="2">
+                <div id="cant">
+                    <button id="decrease">-</button>
+                    <button id="increase">+</button>
+                </div>
+
+              </div>
+          
+            <div class="precioo">
+              <h3>$ 3599,98</h3>
+            </div>
+
+            <div class="borrar-btn">x</div>
+        </div>
+
+
+        <div class="detalles">
+            <div class="item1">
+              <img class="card-item__img--front" src="../../img/pokemon/pidgeotto-1.webp">
+              <div class="text-details">
+                <h3>PIDGEOTTO</h3>
+                <h5>POKEMON</h5>
+                <h5>Precio unitario: $ 1799,99</h5>
+              </div>
+            </div>
+          
+            <div class="cantidad">
+                <input id="number" value="1">
+                <div id="cant">
+                    <button id="decrease">-</button>
+                    <button id="increase">+</button>
+                </div>
+
+              </div>
+          
+            <div class="precioo">
+              <h3>$ 1799,99</h3>
+            </div>
+
+            <div class="borrar-btn">x</div>
+        </div>
+    </div> 
+    
+</div>
+
+</body>
 
    
 <!--
