@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {body} = require('express-validator');
 const validateInput = require('../middlewares/validator');
-const {conn} = require('./../config/conn');
+const {conn} = require('./../config/conn2');
 
 const {
     getLogin,

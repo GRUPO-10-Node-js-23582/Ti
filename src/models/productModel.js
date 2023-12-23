@@ -1,9 +1,12 @@
-const { conn } = require('../config/conn');
+const { conn } = require('../config/conn2');
 
 const getAllItems = async () => {
     try{
-        const [rows] = await conn.query('SELECT * FROM product JOIN licence WHERE product.licence_id= licence.licence_id ORDER BY product.product_id ;');   
-    //const data = await conn.query("SELECT table_name FROM information_schema.tables WHERE table_type='BASE TABLE'; " );
+        const [rows] = await conn.query('SELECT * FROM product JOIN licence WHERE product.licence_id= licence.licence_id ORDER BY product.product_id ;');
+        //const [rows] = await conn.query('SELECT * FROM product');  
+    console.log(" Hasta aca llega ?");
+        //const [rows] = await conn.query("SELECT table_name FROM information_schema.tables WHERE table_type='BASE TABLE'; " );
+    console.log(rows);
     return rows;
     }catch(error){
         console.log(' Tuviste un error ' , error);

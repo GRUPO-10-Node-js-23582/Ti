@@ -20,8 +20,10 @@ const authControllers ={
 		const [valido] = await verificarUser(email)
 		console.log("Esto sale del valido de postLogin : " ,valido)
 		if(valido === undefined){
+            console.log(" NO pasa el valido email " , email);
 			res.redirect('/auth/login/?error=1')
 		} else if(!(await crypt.compare(password, valido.password))){
+            console.log(" NO pasa el valido password " , password ,valido.password);
 			res.redirect('/auth/login/?error=1')
 		} else {
 			req.session.user_id = valido.user_id
@@ -35,7 +37,7 @@ const authControllers ={
     //postRegister : (req,res) => res.render('pages/admin/register'),
     postRegister: async (req,res) => {
         const usuario = await createUser(req.body.name,req.body.lastname ,req.body.email,req.body.password)
-        res.redirect('/admin/admin');
+        res.redirect('/auth/login');
     },
     
    /* getUsers: async(req,res) => {

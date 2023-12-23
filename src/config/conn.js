@@ -16,8 +16,10 @@ const pool = mysql.createPool({
 pool.getConnection((e,conn) => {
     if (e){
         console.log(' ERROR al conectarse WTF!!! ' + e );
+        
     }else{
-        console.log(' Conexion a la BBDD exitosa WOOOWW ');       
+        console.log(' Conexion a la BBDD exitosa WOOOWW '); 
+              
     }
 });
 

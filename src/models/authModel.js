@@ -1,4 +1,4 @@
-const { conn } = require('../config/conn');
+const { conn } = require('../config/conn2');
 const crypt = require('bcryptjs')
 
 
